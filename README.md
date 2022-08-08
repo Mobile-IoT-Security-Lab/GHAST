@@ -33,9 +33,9 @@ At the end of the computation, the results will be stored in a subfolder of the 
 
 ## ❱ License
 
-This tool is available under a dual license: a commercial one required for closed source projects or commercial projects, and an AGPL license for open-source projects.
+This tool is available under AGPL license for open-source projects.
 
-Depending on your needs, you must choose one of them and follow its policies. A detail of the policies and agreements for each license type is available in the [LICENSE.COMMERCIAL](LICENSE.COMMERCIAL) and [LICENSE](LICENSE) files.
+A detail of the policy and agreements is available in the [LICENSE](LICENSE) file.
 
 ## ❱ Credits
 
