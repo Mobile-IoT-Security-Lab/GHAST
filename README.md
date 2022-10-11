@@ -3,6 +3,8 @@
 
 **GHAST** identifies code repositories in the software supply chain and collects all the workflows in these repositories. Then, it provides security evaluation of the workflows.
 
+:warning: **GHAST** relies on Sunset, so it automatically analyses _only_ python-based projects. However, GHAST scripts can still be used to analyze workflow files directly. Sunset is a work-in-progress project that will support other languages in the short term.
+
 ## ❱ Setup
 This prototype is compatible with Ubuntu 20.04 and Python 3.8.
 
