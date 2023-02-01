@@ -8,6 +8,7 @@ import argparse
 parser = argparse.ArgumentParser(description='')
 parser.add_argument("--src", dest='source', type=str)
 parser.add_argument("--dest", dest="dest", type=str)
+parser.add_argument("--token", dest="token", type=str)
 
 args = parser.parse_args()
 
@@ -126,7 +127,7 @@ def main():
                     elif not job_p and not wf_perms:
                         vulns[wf_file][wf.get('name')]['issues'].append((job_name, critical_permissions.NO_DECLARATION.name))
             api_url = "https://api.github.com/repos/" + wf_file + "/tags"
-            req = requests.get(api_url, headers={"Authorization": "token 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"})
+            req = requests.get(api_url, headers={"Authorization": "token " + args.token})
             tags = json.loads(req.text)
             if len(_uses) > 0:
                 for ood in _uses:

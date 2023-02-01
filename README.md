@@ -25,7 +25,8 @@ Install the requirements using the command `pip install -r requirements.txt`
 
 First, you must copy the folder of the software under test inside of the `samples` directory.
 
-Then you need to copy the GitHub token inside the run.sh file by replacing the tag `<ghtoken>`;
+Then you need to copy the GitHub token inside the run.sh file by replacing the tag `<ghtoken>`.
+We chose to handle tokens this way to allow the use of multiple tokens.
 
 After that, execute the following command: `run.sh <project_name> <timeout>`
 

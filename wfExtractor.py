@@ -20,6 +20,7 @@ import argparse
 parser = argparse.ArgumentParser(description='')
 parser.add_argument("--wf", dest='workflowfile', type=str)
 parser.add_argument("--dest", dest="destination", type=str)
+parser.add_argument("--token", dest="token", type=str)
 
 args = parser.parse_args()
 # get position of string ": name:" in a file
@@ -192,7 +193,7 @@ def check_uses_version(action: str) -> bool:
         version = action.split("@")[-1].replace("v", "")
     position = action.split("@")[0]
     api_url = "https://api.github.com/repos/" + position + "/releases/latest"
-    req = requests.get(api_url, headers={"Authorization": "token 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"})
+    req = requests.get(api_url, headers={"Authorization": "token " + args.token})
     if req.status_code == 200:
         data = json.loads(req.text)
         latest_version = str(data['tag_name']).replace("v", "")
